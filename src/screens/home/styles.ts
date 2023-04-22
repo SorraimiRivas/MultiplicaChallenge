@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
     height: 143,
     backgroundColor: '#334FFA',
     borderRadius: 20,
-    left: 35,
     marginTop: 20,
+    alignSelf: 'center',
   },
 
   month: {
@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    alignSelf: 'center',
     width: 353,
     height: 350,
     backgroundColor: '#FFFFFF',

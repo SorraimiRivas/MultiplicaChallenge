@@ -7,7 +7,6 @@ const App = () => {
   return (
     <NavigationContainer>
       <Navigation />
-      <StatusBar backgroundColor="black" barStyle={'default'} />
     </NavigationContainer>
   );
 };

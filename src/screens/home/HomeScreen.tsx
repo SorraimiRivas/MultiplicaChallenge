@@ -1,6 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {Text, SafeAreaView, View, FlatList} from 'react-native';
+import {Text, SafeAreaView, View, FlatList, StatusBar} from 'react-native';
 import {RootStackParamList} from '../../navigation';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import styles from './styles';
@@ -71,6 +71,7 @@ const HomeScreen: FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar backgroundColor="#F8F8F8" barStyle="dark-content" />
       <View style={styles.greetingContainer}>
         <Text style={styles.greeting}>Bienvenido de vuelta!</Text>
         <Text style={styles.name}>Sorraimi Rivas</Text>
@@ -91,6 +92,7 @@ const HomeScreen: FC = () => {
           showsVerticalScrollIndicator={false}
           data={filteredData(filter)}
           renderItem={renderItem}
+          maxToRenderPerBatch={10}
         />
       </View>
       <View>
