@@ -1,11 +1,14 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {Text, Button, SafeAreaView} from 'react-native';
 
 const DetailScreen = () => {
+  const navigation = useNavigation();
   return (
-    <View>
-      <Text>DetailScreen</Text>
-    </View>
+    <SafeAreaView>
+      <Text>Detail Screen</Text>
+      <Button title="Go Back" onPress={() => navigation.goBack()} />
+    </SafeAreaView>
   );
 };
 
