@@ -6,6 +6,7 @@ type Props = {
   title: string;
   onPress: () => void;
 };
+
 const MediumButton: FC<Props> = ({title, onPress}) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>

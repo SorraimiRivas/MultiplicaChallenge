@@ -2,12 +2,6 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/home/HomeScreen';
 import DetailScreen from '../screens/details/DetailScreen';
-import {TProduct} from '../utils';
-
-export type RootStackParamList = {
-  Home: undefined;
-  Details: {item: TProduct};
-};
 
 const Stack = createNativeStackNavigator();
 

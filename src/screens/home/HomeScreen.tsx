@@ -1,24 +1,21 @@
 import React, {FC, useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {Text, SafeAreaView, View, FlatList, StatusBar} from 'react-native';
-import {RootStackParamList} from '../../navigation';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import styles from './styles';
 import ProductCard from '../../components/cards/productCard/ProductCard';
 import useAxios from '../../hooks/useGetData';
-import {TProduct, calculateTotalPoints} from '../../utils';
+import {calculateTotalPoints} from '../../utils';
 import LargeButton from '../../components/buttons/large/LargeButton';
 import MediumButton from '../../components/buttons/medium/MediumButton';
-
-type NavigationProps = NativeStackNavigationProp<RootStackParamList, 'Home'>;
-
-type Filter = 'Todos' | 'Ganados' | 'Canjeados';
+import {TNavigationProps} from '../../types/navigation.types';
+import {TFilter} from '../../types/screens.types';
+import {TProduct} from '../../types/utils.types';
 
 const HomeScreen: FC = () => {
-  const [filter, setFilter] = useState<Filter>('Todos');
+  const [filter, setFilter] = useState<TFilter>('Todos');
 
   const {data, fetchData} = useAxios();
-  const navigation = useNavigation<NavigationProps>();
+  const navigation = useNavigation<TNavigationProps>();
 
   const filteredData = (str: string) => {
     switch (str) {

@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import axios from 'axios';
-import {TProduct, formatDataArray} from '../utils';
+import {formatDataArray} from '../utils';
+import {TProduct} from '../types/utils.types';
 
 const useAxios = () => {
   const [data, setData] = useState<TProduct[]>([]);

@@ -1,23 +1,7 @@
-type RawProductData = {
-  id: number;
-  product: string;
-  createdAt: string;
-  points: number;
-  image: string;
-  is_redemption: boolean;
-};
+import {TProduct, TRawProductData} from '../types/utils.types';
 
-export type TProduct = {
-  id: number;
-  productName: string;
-  createdAt: string;
-  points: number;
-  image: string;
-  isRedeemed: boolean;
-};
-
-export const formatDataArray = (rawData: RawProductData[]): TProduct[] => {
-  return rawData.map((item: RawProductData) => {
+export const formatDataArray = (rawData: TRawProductData[]): TProduct[] => {
+  return rawData.map((item: TRawProductData) => {
     return {
       id: item.id,
       productName: item.product,

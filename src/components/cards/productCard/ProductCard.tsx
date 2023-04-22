@@ -1,18 +1,10 @@
-import {View, Text, Image, Pressable} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React, {FC} from 'react';
 import styles from './style';
 import {formatDate} from '../../../utils';
+import {TProductCardProps} from '../../../types/components.types';
 
-type Props = {
-  productName: string;
-  createdAt: string;
-  points: number;
-  image: string;
-  isRedeemed: boolean;
-  onPress: () => void;
-};
-
-const ProductCard: FC<Props> = ({
+const ProductCard: FC<TProductCardProps> = ({
   onPress,
   productName,
   points,
@@ -25,7 +17,7 @@ const ProductCard: FC<Props> = ({
   const signColor = !isRedeemed ? 'green' : 'red';
 
   return (
-    <Pressable style={styles.cardContainer} onPress={onPress}>
+    <TouchableOpacity style={styles.cardContainer} onPress={onPress}>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
@@ -47,7 +39,7 @@ const ProductCard: FC<Props> = ({
       <View>
         <Text style={styles.arrow}>{'\u003e'}</Text>
       </View>
-    </Pressable>
+    </TouchableOpacity>
   );
 };
 
