@@ -81,6 +81,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingVertical: 20,
   },
+
+  buttonsContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 });
 
 export default styles;

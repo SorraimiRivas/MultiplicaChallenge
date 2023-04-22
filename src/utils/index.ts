@@ -36,3 +36,17 @@ export const formatDate = (dateString: string): string => {
   const year = date.getUTCFullYear();
   return `${dayOfMonth} de ${month}, ${year}`;
 };
+
+export const calculateTotalPoints = (arr: TProduct[]): number => {
+  let totalPositivePoints = 0;
+  let totalNegativePoints = 0;
+
+  arr.forEach(item => {
+    if (item.isRedeemed) {
+      totalPositivePoints += item.points;
+    } else {
+      totalNegativePoints += item.points;
+    }
+  });
+  return totalPositivePoints - totalNegativePoints;
+};

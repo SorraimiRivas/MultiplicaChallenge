@@ -1,10 +1,15 @@
-import {View, Text, TouchableOpacity} from 'react-native';
-import React from 'react';
+import {Text, TouchableOpacity} from 'react-native';
+import React, {FC} from 'react';
 import styles from './styles';
 
-const LargeButton = ({title}) => {
+type Props = {
+  title: string;
+  onPress: () => void;
+};
+
+const LargeButton: FC<Props> = ({title, onPress}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
