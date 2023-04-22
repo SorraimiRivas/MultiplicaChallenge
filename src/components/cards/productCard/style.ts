@@ -21,12 +21,17 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
 
+  productInfoContainer: {
+    marginRight: 30,
+    width: 175,
+    bottom: 5,
+  },
+
   productName: {
     fontFamily: 'Avenir',
     fontWeight: '800',
     fontSize: 14,
     color: '#000000',
-    lineHeight: 19.12,
   },
 
   createdAt: {
@@ -34,12 +39,18 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontSize: 12,
     color: '#000000',
-    lineHeight: 16.39,
   },
 
   pointsContainer: {
-    marginLeft: 50,
-    left: 40,
+    width: 60,
+    bottom: 5,
+    right: 25,
+  },
+
+  sign: {
+    fontFamily: 'Avenir',
+    fontWeight: '900',
+    fontSize: 16,
   },
 
   points: {
@@ -53,7 +64,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Avenir',
     fontSize: 20,
     fontWeight: '800',
-    left: 63,
+    bottom: 5,
   },
 });
 
