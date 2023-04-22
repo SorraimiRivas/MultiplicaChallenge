@@ -1,11 +1,30 @@
 import React from 'react';
-import {useNavigation} from '@react-navigation/native';
+import {RouteProp, useNavigation} from '@react-navigation/native';
 import {Text, View, StatusBar, Image} from 'react-native';
 import styles from './styles';
 import {formatDate} from '../../utils';
 import LargeButton from '../../components/buttons/large/LargeButton';
+import {RootStackParamList} from '../../navigation';
 
-const DetailScreen = ({route}) => {
+type DetailScreenParams = {
+  item: {
+    productName: string;
+    image: string;
+    createdAt: string;
+    points: number;
+  };
+};
+
+// Define the type for the route prop, using the DetailScreenParams type we just defined
+type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Details'> & {
+  params: DetailScreenParams;
+};
+
+type Props = {
+  route: DetailScreenRouteProp;
+};
+
+const DetailScreen = ({route}: Props) => {
   const {item} = route.params;
   const creationDate = formatDate(item.createdAt);
   const navigation = useNavigation();

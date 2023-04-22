@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   greetingContainer: {
     width: 209,
     height: 48,
-    marginTop: 20,
+    marginTop: 4,
   },
 
   greeting: {
