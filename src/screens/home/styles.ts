@@ -36,6 +36,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+
+  error: {
+    fontFamily: 'Avenir',
+    fontSize: 20,
+    fontWeight: '800',
+    marginTop: 100,
+    color: '#000000',
+    alignSelf: 'center',
+  },
 });
 
 export default styles;

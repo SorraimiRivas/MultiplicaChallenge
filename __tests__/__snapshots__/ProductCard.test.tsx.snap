@@ -145,6 +145,7 @@ exports[`renders ProductCard component 1`] = `
           "fontFamily": "Avenir",
           "fontSize": 20,
           "fontWeight": "800",
+          "right": 5,
         }
       }
     >

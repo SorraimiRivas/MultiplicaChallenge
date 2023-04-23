@@ -15,7 +15,7 @@ import Greeting from '../../components/Greeting';
 const HomeScreen: FC = () => {
   const [filter, setFilter] = useState<string>('Todos');
 
-  const {data, fetchData} = useAxios();
+  const {data, fetchData, isError} = useAxios();
   const navigation = useNavigation<NavigationProp<TRootStackParamList>>();
 
   const filteredData = (str: string) => {
@@ -69,35 +69,44 @@ const HomeScreen: FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor="#F8F8F8" barStyle="dark-content" />
-      <Greeting userName="Sorraimi Rivas" />
-      <View>
-        <Text style={styles.subtitle}>TUS PUNTOS</Text>
-      </View>
-      <PointsCard points={totalPoints} month="Diciembre" />
-      <View>
-        <Text style={styles.subtitle}>TUS MOVIMIENTOS</Text>
-      </View>
-      <View style={styles.productContainer}>
-        <FlatList
-          testID="product-list"
-          keyExtractor={(item, index) => `${item.id + index.toString()}`}
-          showsVerticalScrollIndicator={false}
-          data={filteredData(filter)}
-          renderItem={renderItem}
-          maxToRenderPerBatch={10}
-        />
-      </View>
-      <View>
-        {filter !== 'Todos' ? (
-          <LargeButton title="Todos" onPress={handleShowAllFilter} />
-        ) : (
-          <View style={styles.buttonsContainer}>
-            <MediumButton title="Ganados" onPress={handleObtainedFilter} />
-            <MediumButton title="Canjeados" onPress={handleRedeemedFilter} />
+      {!isError && (
+        <>
+          <StatusBar backgroundColor="#F8F8F8" barStyle="dark-content" />
+          <Greeting userName="Sorraimi Rivas" />
+          <View>
+            <Text style={styles.subtitle}>TUS PUNTOS</Text>
           </View>
-        )}
-      </View>
+          <PointsCard points={totalPoints} month="Diciembre" />
+          <View>
+            <Text style={styles.subtitle}>TUS MOVIMIENTOS</Text>
+          </View>
+          <View style={styles.productContainer}>
+            <FlatList
+              ListEmptyComponent={<Text>No hay productos</Text>}
+              testID="product-list"
+              keyExtractor={(item, index) => `${item.id + index.toString()}`}
+              showsVerticalScrollIndicator={false}
+              data={filteredData(filter)}
+              renderItem={renderItem}
+              maxToRenderPerBatch={10}
+            />
+          </View>
+          <View>
+            {filter !== 'Todos' ? (
+              <LargeButton title="Todos" onPress={handleShowAllFilter} />
+            ) : (
+              <View style={styles.buttonsContainer}>
+                <MediumButton title="Ganados" onPress={handleObtainedFilter} />
+                <MediumButton
+                  title="Canjeados"
+                  onPress={handleRedeemedFilter}
+                />
+              </View>
+            )}
+          </View>
+        </>
+      )}
+      <Text style={styles.error}>No hay nada que mostrar aqui!</Text>
     </SafeAreaView>
   );
 };
