@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ProductCard component 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "height": 55,
+      "opacity": 1,
+      "width": 333,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "height": 55,
+        "width": 55,
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "uri": "https://i.imgur.com/3l7u1Z2.jpg",
+        }
+      }
+      style={
+        {
+          "borderRadius": 10,
+          "height": 45,
+          "resizeMode": "cover",
+          "width": 45,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "bottom": 5,
+        "marginRight": 30,
+        "width": 175,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontFamily": "Avenir",
+          "fontSize": 14,
+          "fontWeight": "800",
+        }
+      }
+    >
+      Name
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontFamily": "Avenir",
+          "fontSize": 12,
+          "fontWeight": "400",
+        }
+      }
+    >
+      -/-/-
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "bottom": 5,
+        "right": 25,
+        "width": 60,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontFamily": "Avenir",
+            "fontSize": 16,
+            "fontWeight": "900",
+          },
+          {
+            "color": "green",
+          },
+        ]
+      }
+    >
+      +
+      <Text
+        style={
+          {
+            "color": "#000000",
+            "fontFamily": "Avenir",
+            "fontSize": 16,
+            "fontWeight": "800",
+          }
+        }
+      >
+        100
+      </Text>
+    </Text>
+  </View>
+  <View>
+    <Text
+      style={
+        {
+          "bottom": 5,
+          "color": "#000000",
+          "fontFamily": "Avenir",
+          "fontSize": 20,
+          "fontWeight": "800",
+        }
+      }
+    >
+      &gt;
+    </Text>
+  </View>
+</View>
+`;

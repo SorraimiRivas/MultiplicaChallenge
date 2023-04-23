@@ -14,6 +14,11 @@ export const formatDataArray = (rawData: TRawProductData[]): TProduct[] => {
 };
 
 export const formatDate = (dateString: string): string => {
+  const parsedDate = Date.parse(dateString);
+
+  if (isNaN(parsedDate)) {
+    return '-/-/-';
+  }
   const date = new Date(dateString);
   const dayOfMonth = date.getUTCDate();
   const month = date.toLocaleString('es-ES', {month: 'long'});

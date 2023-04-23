@@ -85,6 +85,7 @@ const HomeScreen: FC = () => {
       </View>
       <View style={styles.productContainer}>
         <FlatList
+          testID="product-list"
           keyExtractor={(item, index) => `${item.id + index.toString()}`}
           showsVerticalScrollIndicator={false}
           data={filteredData(filter)}
