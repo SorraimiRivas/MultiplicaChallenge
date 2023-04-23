@@ -11,3 +11,12 @@ export type TButtonProps = {
   title: string;
   onPress: () => void;
 };
+
+export type TPointsCardProps = {
+  points: number;
+  month: string;
+};
+
+export type TGreetingProps = {
+  userName: string;
+};

@@ -6,13 +6,14 @@ import ProductCard from '../../components/cards/productCard/ProductCard';
 import {calculateTotalPoints} from '../../utils';
 import LargeButton from '../../components/buttons/large/LargeButton';
 import MediumButton from '../../components/buttons/medium/MediumButton';
-import {TFilter} from '../../types/screens.types';
 import {TProduct} from '../../types/utils.types';
 import {TRootStackParamList} from '../../types/navigation.types';
 import useAxios from '../../hooks/useAxios';
+import PointsCard from '../../components/cards/pointsCard';
+import Greeting from '../../components/Greeting';
 
 const HomeScreen: FC = () => {
-  const [filter, setFilter] = useState<TFilter>('Todos');
+  const [filter, setFilter] = useState<string>('Todos');
 
   const {data, fetchData} = useAxios();
   const navigation = useNavigation<NavigationProp<TRootStackParamList>>();
@@ -69,17 +70,11 @@ const HomeScreen: FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#F8F8F8" barStyle="dark-content" />
-      <View style={styles.greetingContainer}>
-        <Text style={styles.greeting}>Bienvenido de vuelta!</Text>
-        <Text style={styles.name}>Sorraimi Rivas</Text>
-      </View>
+      <Greeting userName="Sorraimi Rivas" />
       <View>
         <Text style={styles.subtitle}>TUS PUNTOS</Text>
       </View>
-      <View style={styles.totalPointsContainer}>
-        <Text style={styles.month}>Diciembre</Text>
-        <Text style={styles.totalPoints}>{`${totalPoints} pts`}</Text>
-      </View>
+      <PointsCard points={totalPoints} month="Diciembre" />
       <View>
         <Text style={styles.subtitle}>TUS MOVIMIENTOS</Text>
       </View>

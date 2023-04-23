@@ -9,28 +9,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#F0F0F0',
   },
 
-  greetingContainer: {
-    width: 209,
-    height: 48,
-    marginTop: 4,
-  },
-
-  greeting: {
-    fontFamily: 'Avenir',
-    fontSize: 20,
-    fontWeight: '800',
-    lineHeight: 27.32,
-    color: '#020202',
-  },
-
-  name: {
-    fontFamily: 'Avenir',
-    fontSize: 16,
-    fontWeight: '400',
-    lineHeight: 27.32,
-    color: '#020202',
-  },
-
   subtitle: {
     fontFamily: 'Avenir',
     fontSize: 14,
@@ -38,36 +16,6 @@ const styles = StyleSheet.create({
     lineHeight: 19.12,
     marginTop: 20,
     color: '#9B9898',
-  },
-
-  totalPointsContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 286,
-    height: 143,
-    backgroundColor: '#334FFA',
-    borderRadius: 20,
-    marginTop: 20,
-    alignSelf: 'center',
-  },
-
-  month: {
-    fontFamily: 'Avenir',
-    fontSize: 16,
-    fontWeight: '800',
-    color: '#FFFFFF',
-    left: 18,
-    top: 21,
-  },
-
-  totalPoints: {
-    fontFamily: 'Avenir',
-    fontSize: 32,
-    fontWeight: '800',
-    textAlign: 'center',
-    top: 21,
-    color: '#FFFFFF',
-    lineHeight: 43.71,
   },
 
   productContainer: {

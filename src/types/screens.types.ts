@@ -1,1 +1,1 @@
-export type TFilter = 'Todos' | 'Ganados' | 'Canjeados';
+// export type TFilter = 'Todos' | 'Ganados' | 'Canjeados';
