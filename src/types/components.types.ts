@@ -6,3 +6,8 @@ export type TProductCardProps = {
   isRedeemed: boolean;
   onPress: () => void;
 };
+
+export type TButtonProps = {
+  title: string;
+  onPress: () => void;
+};

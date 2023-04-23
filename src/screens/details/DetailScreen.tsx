@@ -3,10 +3,10 @@ import {Text, View, StatusBar, Image} from 'react-native';
 import styles from './styles';
 import {formatDate} from '../../utils';
 import LargeButton from '../../components/buttons/large/LargeButton';
-import {DetailScreenRouteProp} from '../../types/screens.types';
 import {useNavigation} from '@react-navigation/native';
+import {TDetailsNavigationProps} from '../../types/navigation.types';
 
-const DetailScreen = ({route}: DetailScreenRouteProp) => {
+const DetailScreen = ({route}: TDetailsNavigationProps) => {
   const {item} = route.params;
   const creationDate = formatDate(item.createdAt);
   const navigation = useNavigation();

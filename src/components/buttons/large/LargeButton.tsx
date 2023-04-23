@@ -1,13 +1,9 @@
 import {Text, TouchableOpacity} from 'react-native';
 import React, {FC} from 'react';
 import styles from './styles';
+import {TButtonProps} from '../../../types/components.types';
 
-type Props = {
-  title: string;
-  onPress: () => void;
-};
-
-const LargeButton: FC<Props> = ({title, onPress}) => {
+const LargeButton: FC<TButtonProps> = ({title, onPress}) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>

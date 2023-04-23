@@ -2,8 +2,9 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/home/HomeScreen';
 import DetailScreen from '../screens/details/DetailScreen';
+import {TRootStackParamList} from '../types/navigation.types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<TRootStackParamList>();
 
 const Navigation = () => {
   return (
