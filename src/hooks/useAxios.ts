@@ -11,7 +11,7 @@ const useAxios = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        'https://6222994f666291106a29f999.mockapi.o/api/v1/products',
+        'https://6222994f666291106a29f999.mockapi.i/api/v1/products',
       );
       const formattedData = formatDataArray(response.data);
       setData(formattedData);
