@@ -69,9 +69,9 @@ const HomeScreen: FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {!isError && (
+      <StatusBar backgroundColor="#F8F8F8" barStyle="dark-content" />
+      {!isError ? (
         <>
-          <StatusBar backgroundColor="#F8F8F8" barStyle="dark-content" />
           <Greeting userName="Sorraimi Rivas" />
           <View>
             <Text style={styles.subtitle}>TUS PUNTOS</Text>
@@ -83,7 +83,6 @@ const HomeScreen: FC = () => {
           <View style={styles.productContainer}>
             <FlatList
               ListEmptyComponent={<Text>No hay productos</Text>}
-              testID="product-list"
               keyExtractor={(item, index) => `${item.id + index.toString()}`}
               showsVerticalScrollIndicator={false}
               data={filteredData(filter)}
@@ -105,8 +104,9 @@ const HomeScreen: FC = () => {
             )}
           </View>
         </>
+      ) : (
+        <Text style={styles.error}>No hay nada que mostrar aqui!</Text>
       )}
-      <Text style={styles.error}>No hay nada que mostrar aqui!</Text>
     </SafeAreaView>
   );
 };

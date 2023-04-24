@@ -17,8 +17,6 @@ const useAxios = () => {
       setData(formattedData);
       setIsError(false);
     } catch (err: any) {
-      console.log(err.message);
-
       Alert.alert(
         'Oh no!',
         'Algo salio mal, intentelo de nuevo o trata mas tarde.',
